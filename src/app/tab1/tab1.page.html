@@ -12,15 +12,17 @@
   </ion-header>
   <ion-card class="Forerunner">
     <ion-card-header>
-      <ion-card-title color="warning" >Forerunner</ion-card-title>
+      <ion-card-title color="warning" >Factoin</ion-card-title>
     </ion-card-header>
   
-    <ion-card-content >
-     <ion-button (click)="getData()">Click</ion-button>
+    <ion-card-content color="warning" >
+      <ul>
+        <li class="factoins" *ngFor= "let f of factoin"> <ion-text font color="primary"> <h1>{{f.name}}</h1>{{f.races}}{{f.info}}{{f.line}}<br></ion-text></li>
+      </ul>
     </ion-card-content>
   </ion-card>
   
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button (click)="getData()">Click</ion-button>
 
   
 </ion-content>

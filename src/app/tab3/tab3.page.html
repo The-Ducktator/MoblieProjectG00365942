@@ -18,14 +18,13 @@
     </ion-card-header>
     <ion-card-content>
       <ul>
-        <li *ngFor= "let ch of cheif">{{ch.line}}</li>
+        <li [hidden]="hideChief" *ngFor= "let ch of cheif">{{ch.line}}</li>
       </ul>
     </ion-card-content>
   </ion-card>
 </div>
-<button ion-button (click)="hide()">Hide Div</button>
-<div class="hideMe"> here your content</div>
-<button ion-button (click)="show()">Hide Div</button>
+<div [hidden]="hideChief">Dad is gay</div>
+<button ion-button (click)="toggleChief()">{{cheifButtonText}}</button>
   <ion-card>
     <ion-card-header>    
       <ion-card-title>Cortana</ion-card-title>

@@ -13,6 +13,9 @@ import { ApiService } from '../api.service';
 export class Tab3Page  implements OnInit{
   jsonHeader;
   json;
+  hideChief=false;
+  hideCor=false;
+  cheifButtonText = "Show chief details";
  
   constructor(private apiService: ApiService) {}
   ngOnInit() {
@@ -25,13 +28,23 @@ export class Tab3Page  implements OnInit{
       this.jsonHeader = data;
     });
   }
-  hide() {
-    hideMe.text = "hide";
+  getCheif() {
+    return this.hideChief;
   }
 
-  show() {
-    let hideMe = true;
+  toggleChief() {
+    this.hideChief=!this.hideChief;
+    if(this.hideChief){
+      this.cheifButtonText = "Show chief details";
+    }
+    else{
+      this.cheifButtonText = "Hide chief details";
+    }
+    this.hideCor = false;
   }
+
+
+
   cheif: object[] =
   [{line: "Human"},
    {line: "Petty Officer John-117 or Master Chief for short is the main hero of the Halo franchise. As a genetically-modified SPARTAN II super-soldier, the Master Chief is basically a walking tank. Unfortunately, he's also one of the last of his kind, as most of the other SPARTANs were wiped out."}];
@@ -44,6 +57,7 @@ export class Tab3Page  implements OnInit{
   arbiter: object[] =
   [{line: "Sangheili"},
    {line: "Thel' Vadamee better known as his Arbiter is a Sangheili. He was supreme commander and led the fleet of Particular Justice, particularly during the Battle of Reach and the Battle of Settlement 04, before being condemned by the Covenant High Council for incompetence and lack of faith. He received themark of shame, and became the eighteenth Arbiter to die in honor for Covenant. He nevertheless revealed the lies of the Prophets and led the Covenant separatists during the Great Schism. He then fought alongside humans to destroy the Alliance and the Parasite."}];
+
 
   truth: object[] =
   [{line: " ‎San'Shyuum"},
