@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { LocalStorageService } from '../local-storage.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -17,18 +18,10 @@ export class Tab1Page {
   {name: "BANISHED"}, {races: "Jiralhanae, Lekgolo, Unggoy, Kig-Yar, Huragok, Sangheili, Humans"}, {info: "The Banished are a mercenary organization and splinter faction that rebelled against the Covenant Empire and rose to power after the conclusion of the Human-Covenant War. The Banished were formed by Atriox and several Jiralhanae loyal to him who rebelled against their Sangheili masters during the Human-Covenant War. For a decade, the Banished were little more than raiders and pirates, conducting surgical raids against the Covenant and other targets while gathering mercenaries to their cause. Unimpeded by the Covenant's devastating Great Schism, the Banished managed to salvage many of the empire's former assets after its fall, becoming a formidable power in their own right. While Atriox had already recruited many allies during the Covenant War, the Banished gained many new members in the war's aftermath from former Covenant who wished to continue living as warriors, including human criminals who were influenced by the Banished and may have joined."}, {line: "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"},
 ];
 
-  constructor(private storage: Storage) { }
-  getData () {
-    this.storage.set('name', 'Max');
-    // Or to get a key/value pair
-    this.storage.get('name').then((val) => {
-      console.log('Your name is', val);
-    });
-  
-  }
-  
-  
-
-  
+  constructor(private storage: LocalStorageService) { }
+  username : string = "This is the start";
+  getDataTab1 () {
+    this.storage.getData(this.username)
+  };
 
 }

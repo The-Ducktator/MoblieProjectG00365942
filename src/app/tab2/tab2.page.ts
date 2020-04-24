@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { LocalStorageService } from '../local-storage.service';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,21 +7,21 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private localStorage: LocalStorageService) {}
   haloMainGames: object[] =
-  [{name: "Halo: Combat Evolved", date:"2001", detail: 'src\app\tab2\Halo1.jpg'},
-  {name: "Halo 2", date:"2004", detail:"1997-2011"},
-  {name: "Halo 3 ", date:"2007", detail:"1990-1997"},
-  {name: "Halo reach", date:"2010", detail:"1976-1990"},
-  {name: "Halo 4", date:"2012", detail:"1974-1976"},
-  {name: "Halo 5", date:"2015", detail:"1974-1976"},
-  {name: "Halo inifinty", date:"2020", detail:"1974-1976"}];
+  [{name: "Halo: Combat Evolved", date:"2001"},
+  {name: "Halo 2", date:"2004"},
+  {name: "Halo 3 ", date:"2007"},
+  {name: "Halo reach", date:"2010"},
+  {name: "Halo 4", date:"2012"},
+  {name: "Halo 5", date:"2015"},
+  {name: "Halo inifinty", date:"2020"}];
 
   haloSideGames: object[] =
-  [{name: "Halo ODST", date:"2009", detail:"2011-"},
-  {name: "Halo Wars", date:"2009", detail:"1997-2011"},
-  {name: "Halo Spartan Assault", date:"2013", detail:"1990-1997"},
-  {name: "Halo Spartan Strike", date:"2015", detail:"1976-1990"},
-  {name: "Halo Wars 2", date:"2017", detail:"2020"}];
+  [{name: "Halo ODST", date:"2009"},
+  {name: "Halo Wars", date:"2009"},
+  {name: "Halo Spartan Assault", date:"2013" },
+  {name: "Halo Spartan Strike", date:"2015" },
+  {name: "Halo Wars 2", date:"2017"}];
 }
 

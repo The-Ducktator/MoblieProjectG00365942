@@ -17,14 +17,15 @@
       <ion-card-title>Master Chief</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <button ion-button (click)="toggleChief()">{{cheifButtonText}}</button>
       <ul>
         <li [hidden]="hideChief" *ngFor= "let ch of cheif">{{ch.line}}</li>
       </ul>
     </ion-card-content>
   </ion-card>
 </div>
-<div [hidden]="hideChief">Dad is gay</div>
-<button ion-button (click)="toggleChief()">{{cheifButtonText}}</button>
+
+
   <ion-card>
     <ion-card-header>    
       <ion-card-title>Cortana</ion-card-title>

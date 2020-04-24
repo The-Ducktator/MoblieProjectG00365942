@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { ApiService } from '../api.service';
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-tab3',
@@ -17,7 +18,7 @@ export class Tab3Page  implements OnInit{
   hideCor=false;
   cheifButtonText = "Show chief details";
  
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private localStorage: LocalStorageService) {}
   ngOnInit() {
     this.apiService.getData().subscribe((data)=>{
       //console.log(data);
