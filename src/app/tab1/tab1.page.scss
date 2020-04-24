@@ -1,7 +1,8 @@
+//Prints an image for the background 
 .tab1{
   --background: url(haloBR.jpg) 0 0/100% 100% no-repeat;
 }
-
+//Makes the card background a lit bit transparent
 .cardBackground{
   --background: rgba(255,255,255,0.8);
 }

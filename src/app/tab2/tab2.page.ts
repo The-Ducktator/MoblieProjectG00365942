@@ -11,7 +11,7 @@ export class Tab2Page {
   users;
  
   constructor(private apiService: ApiService, private localStorage: LocalStorageService) {}
- 
+ //Get json data form an exteral website
   ngOnInit() {
     this.apiService.getData().subscribe((data)=>{
       //console.log(data);
@@ -20,7 +20,7 @@ export class Tab2Page {
    
  
   }
-  
+  //Creates an object array for main games with name, release date
   haloMainGames: object[] =
   [{name: "Halo: Combat Evolved", date:"2001"},
   {name: "Halo 2", date:"2004"},
@@ -29,7 +29,7 @@ export class Tab2Page {
   {name: "Halo 4", date:"2012"},
   {name: "Halo 5", date:"2015"},
   {name: "Halo inifinty", date:"2020"}];
-
+//Creates an object array for side games with name, release date
   haloSideGames: object[] =
   [{name: "Halo ODST", date:"2009"},
   {name: "Halo Wars", date:"2009"},

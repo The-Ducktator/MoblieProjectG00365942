@@ -11,13 +11,10 @@
    
   </ion-header>
   <ion-card class="cardBackground">
-    <ion-card-header>
-      <ion-card-title color="warning" >Factions</ion-card-title>
-    </ion-card-header>
   
-    <ion-card-content color="warning" >
+    <ion-card-content color="primary" >
       <ul class="factoins" *ngFor= "let f of factoin">
-         <ion-text font color="primary"> <h1>{{f.name}}</h1>{{f.races}}{{f.info}}{{f.line}}<br></ion-text>
+         <ion-text font color="primary"> <h1>{{f.name}}</h1></ion-text><ion-text color="dark">{{f.races}}{{f.info}}{{f.line}}<br></ion-text>
       </ul>
     </ion-card-content>
   </ion-card>

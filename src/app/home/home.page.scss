@@ -1,3 +1,8 @@
+//Prints an image for the background
 .home{
   --background: url(haloBR.jpg) 0 0/100% 100% no-repeat;
+}
+//Makes the card background a lit bit transparent
+.header{
+  --background: rgba(255, 255, 255, 0.342);
 }

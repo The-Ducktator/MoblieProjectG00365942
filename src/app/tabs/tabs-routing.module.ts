@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-
+//creates a link to each page
 const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
     children: [
       {
+        //link to Home page
         path: 'home',
         children: [
           {
@@ -18,6 +19,7 @@ const routes: Routes = [
         ]
       },
       {
+        //link to Factions page
         path: 'tab1',
         children: [
           {
@@ -29,6 +31,7 @@ const routes: Routes = [
         ]
       },
       {
+        //link to Admins and Games page
         path: 'tab2',
         children: [
           {
@@ -39,6 +42,7 @@ const routes: Routes = [
         ]
       },
       {
+        //link to Characters page
         path: 'tab3',
         children: [
           {

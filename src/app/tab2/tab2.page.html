@@ -13,28 +13,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
+  <ion-card class="cardBackground">
     <ion-card-header>
       
-      <ion-card-title>User Form exteral site</ion-card-title>
+      <ion-card-title color="primary">User from exteral site</ion-card-title>
     </ion-card-header>
   
-    <ion-card-content>
+    <ion-card-content color="primary">
       <ul>
-        <li *ngFor= "let u of users">{{u.name}} {{u.email}}</li>
+        <ion-text color="dark"><li *ngFor= "let u of users">{{u.name}} {{u.email}}</li></ion-text>
       </ul>
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card class="cardBackground">
     <ion-card-header>
       
-      <ion-card-title>Side Games</ion-card-title>
+      <ion-card-title color="primary">Side Games</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
       <ul>
-        <li *ngFor= "let h of haloSideGames">{{h.name}} {{h.date}} {{h.detail}}</li>
+        <ion-text color="dark"> <li *ngFor= "let h of haloSideGames">{{h.name}} {{h.date}} {{h.detail}}</li></ion-text>
       </ul>
     </ion-card-content>
   </ion-card>

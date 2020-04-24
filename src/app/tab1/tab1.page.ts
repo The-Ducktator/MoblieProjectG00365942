@@ -9,7 +9,7 @@ import { LocalStorageService } from '../local-storage.service';
 })
 @Injectable()
 export class Tab1Page {
-
+//Creates an object array that contains the diffent faction's name, races and info
   factoin: object[] =
   [{name: "UNSC"}, {races: "Races: Humans"}, {info: "The United Nations Space Command is the governing body of the Halo universe. Following the wars of present-day Earth, the UN reforms into the UNSC once extraterrestrial human colonies are established. The military makes up only a small part of the organization, though it's the most explored branch within the Halo lore."}, {line: "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"},
   {name: "COVENANT"}, {races: "Races: San'Shyuum, Sangheili, Jiralhanae, Unggoy, Kig-Yar, Yanme'e, Lekgolo, Huragok"}, {info: "A conglomerate of alien species bent on humanity's destruction, the armies of the Covenant are almost unstoppable. Powered by ancient alien technology and fanatical religious beliefs, the Covenant believe it is their duty to wipe out humanity  and without the help of the Master Chief, they probably would have succeeded."}, {line: "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"},
@@ -19,6 +19,7 @@ export class Tab1Page {
 ];
 
   constructor(private storage: LocalStorageService) { }
+  //was going to be used to call local storage
   username : string = "This is the start";
   getDataTab1 () {
     this.storage.getData(this.username)

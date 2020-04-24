@@ -11,29 +11,29 @@
       <ion-title size="large">Characters</ion-title>
     </ion-toolbar>
   </ion-header>
-<div class="cheif">
-  <ion-card>
+
+  <ion-card class="cardBackground">
     <ion-card-header>    
-      <ion-card-title>Master Chief</ion-card-title>
+      <ion-card-title color="primary">Master Chief</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <button ion-button (click)="toggleChief()">{{cheifButtonText}}</button>
       <ul>
-        <li [hidden]="hideChief" *ngFor= "let ch of cheif">{{ch.line}}</li>
+        <li [hidden]="hideChief" *ngFor= "let ch of cheif"><ion-text color="dark">{{ch.line}}</ion-text></li>
       </ul>
     </ion-card-content>
   </ion-card>
-</div>
 
 
-  <ion-card>
+
+  <ion-card class="cardBackground">
     <ion-card-header>    
-      <ion-card-title>Cortana</ion-card-title>
+      <ion-card-title color="primary">Cortana</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <button ion-button (click)="toggleCortana()">{{cortanaButtonText}}</button>
       <ul>
-        <li [hidden]="hideCor" *ngFor= "let co of cortana">{{co.line}}</li>
+       <li [hidden]="hideCor" *ngFor= "let co of cortana"> <ion-text color="dark">{{co.line}}</ion-text></li>
       </ul>
     </ion-card-content>
   </ion-card>

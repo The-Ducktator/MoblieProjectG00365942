@@ -17,9 +17,11 @@ export class Tab3Page  implements OnInit{
   hideChief=true;
   hideCor=true;
   cheifButtonText = "Show chief details";
-  cortanaButtonText = "Show coratan details";
+  cortanaButtonText = "Show Cortana details";
  
   constructor(private apiService: ApiService, private localStorage: LocalStorageService) {}
+ 
+ //Use for testing JSON
   ngOnInit() {
     this.apiService.getData().subscribe((data)=>{
       //console.log(data);
@@ -30,10 +32,12 @@ export class Tab3Page  implements OnInit{
       this.jsonHeader = data;
     });
   }
+
+  //hiding the infomation on Cheif
   getCheif() {
     return this.hideChief;
   }
-
+//Toggle hide and show on cheif
   toggleChief() {
     this.hideChief=!this.hideChief;
     if(this.hideChief){
@@ -44,32 +48,32 @@ export class Tab3Page  implements OnInit{
     }
    
   }
-
+//hiding the infomation on Cortana
   getCortana() {
     return this.hideCor;
   }
-
+//Toggle hide and show on Cortana
   toggleCortana() {
     this.hideCor=!this.hideCor;
     if(this.hideCor){
-      this.cortanaButtonText = "Show chief details";
+      this.cortanaButtonText = "Show Cortana details";
     }
     else{
-      this.cortanaButtonText = "Hide chief details";
+      this.cortanaButtonText = "Hide Cortana details";
     }
     
   }
 
-
+//Objects to store the race and info on characters
   cheif: object[] =
   [{line: "Human"},
    {line: "Petty Officer John-117 or Master Chief for short is the main hero of the Halo franchise. As a genetically-modified SPARTAN II super-soldier, the Master Chief is basically a walking tank. Unfortunately, he's also one of the last of his kind, as most of the other SPARTANs were wiped out."}];
   
    cortana: object[] =
-  [{line: "Ai"},
+  [{line: "AI"},
    {line: "The Master Chief is powerful on his own, but he's even more lethal once Cortana is at his side. The artificial intelligence is basically the Chief's co-pilot, and Cortana is one of the most advanced pieces of technology that humanity has ever created. In fact, she's one of the main reasons that the Master Chief is still alive today."}
   ];
-  
+  //Additional characters
   arbiter: object[] =
   [{line: "Sangheili"},
    {line: "Thel' Vadamee better known as his Arbiter is a Sangheili. He was supreme commander and led the fleet of Particular Justice, particularly during the Battle of Reach and the Battle of Settlement 04, before being condemned by the Covenant High Council for incompetence and lack of faith. He received themark of shame, and became the eighteenth Arbiter to die in honor for Covenant. He nevertheless revealed the lies of the Prophets and led the Covenant separatists during the Great Schism. He then fought alongside humans to destroy the Alliance and the Parasite."}];
