@@ -1,6 +1,6 @@
 # MoblieProjectG00365942
 Moblie 2 project
-<a href="http://fvcproductions.com"><img src="C:\Users\Margaret Faherty\Desktop\WORK\MOBILE\G00365942\HaloLogo.png" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://www.halowaypoint.com"><img src="HaloLogo.png" title="haloLogo"></a>
 
 <!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
 
