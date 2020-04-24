@@ -25,7 +25,13 @@ export class Tab3Page  implements OnInit{
       this.jsonHeader = data;
     });
   }
+  hide() {
+    hideMe.text = "hide";
+  }
 
+  show() {
+    let hideMe = true;
+  }
   cheif: object[] =
   [{line: "Human"},
    {line: "Petty Officer John-117 or Master Chief for short is the main hero of the Halo franchise. As a genetically-modified SPARTAN II super-soldier, the Master Chief is basically a walking tank. Unfortunately, he's also one of the last of his kind, as most of the other SPARTANs were wiped out."}];

@@ -11,7 +11,7 @@
       <ion-title size="large">Characters</ion-title>
     </ion-toolbar>
   </ion-header>
-
+<div class="cheif">
   <ion-card>
     <ion-card-header>    
       <ion-card-title>Master Chief</ion-card-title>
@@ -22,14 +22,10 @@
       </ul>
     </ion-card-content>
   </ion-card>
- <div>
-  <ul>
-   <!-- <li *ngFor= "let j of json">{{j.userId}}</li>
-  -->
-</ul>
-   
- </div>
- 
+</div>
+<button ion-button (click)="hide()">Hide Div</button>
+<div class="hideMe"> here your content</div>
+<button ion-button (click)="show()">Hide Div</button>
   <ion-card>
     <ion-card-header>    
       <ion-card-title>Cortana</ion-card-title>
