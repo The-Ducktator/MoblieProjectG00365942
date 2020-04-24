@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="tab3" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Characters</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>    
+      <ion-card-title>Master Chief</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li *ngFor= "let ch of cheif">{{ch.line}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+ <div>
+  <ul>
+   <!-- <li *ngFor= "let j of json">{{j.userId}}</li>
+  -->
+</ul>
+   
+ </div>
+ 
+  <ion-card>
+    <ion-card-header>    
+      <ion-card-title>Cortana</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li *ngFor= "let co of cortana">{{co.line}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="tab1" [fullscreen]="true">
+  <ion-header collapse="condense">
+   
+  </ion-header>
+  <ion-card class="Forerunner">
+    <ion-card-header>
+      <ion-card-title color="warning" >Forerunner</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content >
+     <ion-button (click)="getData()">Click</ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  
+</ion-content>
