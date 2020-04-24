@@ -1,13 +1,26 @@
 import { Component } from '@angular/core';
 import { LocalStorageService } from '../local-storage.service';
+import { ApiService } from '../api.service';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor(private localStorage: LocalStorageService) {}
+  
+  users;
+ 
+  constructor(private apiService: ApiService, private localStorage: LocalStorageService) {}
+ 
+  ngOnInit() {
+    this.apiService.getData().subscribe((data)=>{
+      //console.log(data);
+      this.users = data;
+    });
+   
+ 
+  }
+  
   haloMainGames: object[] =
   [{name: "Halo: Combat Evolved", date:"2001"},
   {name: "Halo 2", date:"2004"},

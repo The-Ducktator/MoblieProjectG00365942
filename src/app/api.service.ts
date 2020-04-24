@@ -12,11 +12,11 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
   public getData(){
 
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/todos');
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
   }
 
   public getHeader(){
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/todos/1');
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
 
   }
 }
