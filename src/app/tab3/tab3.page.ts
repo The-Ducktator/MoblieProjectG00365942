@@ -37,21 +37,17 @@ export class Tab3Page  implements OnInit{
   
   arbiter: object[] =
   [{line: "Sangheili"},
-   {line: ""}];
-  
-  johnson: object[] =
-   [{line: "Human"},
-    {line: ""}];
+   {line: "Thel' Vadamee better known as his Arbiter is a Sangheili. He was supreme commander and led the fleet of Particular Justice, particularly during the Battle of Reach and the Battle of Settlement 04, before being condemned by the Covenant High Council for incompetence and lack of faith. He received themark of shame, and became the eighteenth Arbiter to die in honor for Covenant. He nevertheless revealed the lies of the Prophets and led the Covenant separatists during the Great Schism. He then fought alongside humans to destroy the Alliance and the Parasite."}];
 
   truth: object[] =
-  [{line: "Human"},
-   {line: ""}];
+  [{line: " ‎San'Shyuum"},
+   {line: "The High Prophet of Truth is the leader of the three Prophet Hierarchs that led the Covenant High Council during the Ninth Age of Reclamation and one of the main instigators of the war against humanity. In 2552, he plotted the ousting of the Sangheili from the Covenant, and replaced them with the Jiralhanae after the death of the High Prophet of Regret on Installation 05. After the demise of the High Prophet of Mercy on High Charity, he became the leader of the Covenant."}];
   
   gravemind: object[] =
-  [{line: "Human"},
-   {line: ""}];
+  [{line: "Flood"},
+   {line: "The Gravemind seems to the hive mind of the flood. Although not much is known about it, it has knowledge that dates billions of years. It also only speaks in rhyme."}];
    
   atroix: object[] =
-  [{line: "Human"},
-   {line: ""}];
+  [{line: "Jiralhanae"},
+   {line: "Atriox is the powerful Jiralhanae warmaster who leads the Banished. He originally fought on behalf of the Covenant, but was banished after thwarting his own execution. A deadly warrior and brilliant military leader, Atriox inspired many others to join him in exile"}];
 }
