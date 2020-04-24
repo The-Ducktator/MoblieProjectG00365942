@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Factions
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,19 +10,19 @@
   <ion-header collapse="condense">
    
   </ion-header>
-  <ion-card class="Forerunner">
+  <ion-card class="cardBackground">
     <ion-card-header>
-      <ion-card-title color="warning" >Factoin</ion-card-title>
+      <ion-card-title color="warning" >Factions</ion-card-title>
     </ion-card-header>
   
     <ion-card-content color="warning" >
-      <ul>
-        <li class="factoins" *ngFor= "let f of factoin"> <ion-text font color="primary"> <h1>{{f.name}}</h1>{{f.races}}{{f.info}}{{f.line}}<br></ion-text></li>
+      <ul class="factoins" *ngFor= "let f of factoin">
+         <ion-text font color="primary"> <h1>{{f.name}}</h1>{{f.races}}{{f.info}}{{f.line}}<br></ion-text>
       </ul>
     </ion-card-content>
   </ion-card>
   
-  <ion-button (click)="getData()">Click</ion-button>
+ 
 
   
 </ion-content>

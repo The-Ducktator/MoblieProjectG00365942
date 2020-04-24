@@ -14,9 +14,10 @@ import { LocalStorageService } from '../local-storage.service';
 export class Tab3Page  implements OnInit{
   jsonHeader;
   json;
-  hideChief=false;
-  hideCor=false;
+  hideChief=true;
+  hideCor=true;
   cheifButtonText = "Show chief details";
+  cortanaButtonText = "Show coratan details";
  
   constructor(private apiService: ApiService, private localStorage: LocalStorageService) {}
   ngOnInit() {
@@ -41,9 +42,23 @@ export class Tab3Page  implements OnInit{
     else{
       this.cheifButtonText = "Hide chief details";
     }
-    this.hideCor = false;
+   
   }
 
+  getCortana() {
+    return this.hideCor;
+  }
+
+  toggleCortana() {
+    this.hideCor=!this.hideCor;
+    if(this.hideCor){
+      this.cortanaButtonText = "Show chief details";
+    }
+    else{
+      this.cortanaButtonText = "Hide chief details";
+    }
+    
+  }
 
 
   cheif: object[] =
